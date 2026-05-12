@@ -33,40 +33,50 @@ export async function setupAuth(app: Express) {
   app.use(passport.initialize());
   app.use(passport.session());
 
-  passport.use(
-    new GoogleStrategy(
-      {
-        clientID: process.env.GOOGLE_CLIENT_ID!,
-        clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
-        callbackURL: "/api/callback",
-        proxy: true,
-      },
-      async (_accessToken, _refreshToken, profile, done) => {
-        try {
-          const email =
-            profile.emails && profile.emails[0]
-              ? profile.emails[0].value
-              : undefined;
-          const profileImageUrl =
-            profile.photos && profile.photos[0]
-              ? profile.photos[0].value
-              : undefined;
+  const clientID = process.env.GOOGLE_CLIENT_ID;
+  const clientSecret = process.env.GOOGLE_CLIENT_SECRET;
 
-          const user = await authStorage.upsertUser({
-            id: profile.id,
-            email,
-            firstName: profile.name?.givenName,
-            lastName: profile.name?.familyName,
-            profileImageUrl,
-          });
+  if (!clientID || !clientSecret) {
+    console.warn(
+      "[auth] WARNING: GOOGLE_CLIENT_ID or GOOGLE_CLIENT_SECRET is not set. " +
+      "Google login will not work until these secrets are configured."
+    );
+  } else {
+    passport.use(
+      new GoogleStrategy(
+        {
+          clientID,
+          clientSecret,
+          callbackURL: "/api/callback",
+          proxy: true,
+        },
+        async (_accessToken, _refreshToken, profile, done) => {
+          try {
+            const email =
+              profile.emails && profile.emails[0]
+                ? profile.emails[0].value
+                : undefined;
+            const profileImageUrl =
+              profile.photos && profile.photos[0]
+                ? profile.photos[0].value
+                : undefined;
 
-          return done(null, user);
-        } catch (error) {
-          return done(error as Error);
+            const user = await authStorage.upsertUser({
+              id: profile.id,
+              email,
+              firstName: profile.name?.givenName,
+              lastName: profile.name?.familyName,
+              profileImageUrl,
+            });
+
+            return done(null, user);
+          } catch (error) {
+            return done(error as Error);
+          }
         }
-      }
-    )
-  );
+      )
+    );
+  }
 
   passport.serializeUser((user: any, cb) => cb(null, user.id));
   passport.deserializeUser(async (id: string, cb) => {
@@ -78,17 +88,26 @@ export async function setupAuth(app: Express) {
     }
   });
 
-  app.get("/api/login", passport.authenticate("google", {
-    scope: ["openid", "email", "profile"],
-  }));
+  app.get("/api/login", (req, res, next) => {
+    if (!clientID || !clientSecret) {
+      return res.status(503).send(
+        "Google OAuth is not configured. Please set GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET."
+      );
+    }
+    passport.authenticate("google", {
+      scope: ["openid", "email", "profile"],
+    })(req, res, next);
+  });
 
-  app.get(
-    "/api/callback",
+  app.get("/api/callback", (req, res, next) => {
+    if (!clientID || !clientSecret) {
+      return res.redirect("/");
+    }
     passport.authenticate("google", {
       successReturnToOrRedirect: "/",
       failureRedirect: "/api/login",
-    })
-  );
+    })(req, res, next);
+  });
 
   app.get("/api/logout", (req, res) => {
     req.logout(() => {
