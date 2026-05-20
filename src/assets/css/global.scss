@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import './fonts.scss';
+@import './variables.scss';
+@import './mixins.scss';
+@import './components.scss';
+
+
+
+* {
+	transition: color $transition_theme, background-color $transition_theme;
+	font-family: 'Inter', Arial;
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+}
+
+
+body {
+	background-color: var(--primary_bg);
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+
