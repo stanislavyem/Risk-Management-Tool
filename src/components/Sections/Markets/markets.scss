@@ -1,0 +1,44 @@
+@import "../../../assets/css/variables.scss" ;
+
+section.section_markets {
+	background: --primary_bg;
+
+	.section_markets__header.section_markets__header {
+		text-align: center;
+		align-self: center;	
+		// font-size: 2rem;
+		font-size: 1.5rem;
+		color: var(--primary_text);
+		font-weight: 700;
+		padding-left: 40px;
+		padding-right: 40px;
+		
+		@include respond-to(sm) {
+			font-size: 2rem;
+			margin-bottom: 2rem;
+		}
+		
+		@include respond-to(md) {
+			font-size: 2.7rem;
+			margin-bottom: 4.5rem;
+			display: none;
+		}
+	}
+}
+
+.section_markets .container_page.container_content {
+	background-color: #00FFA1 !important;
+	border-radius: 12px;
+	padding-right: 0 !important;
+	
+	@media (max-width: $md) { 
+		padding-left: 0 !important;
+	}
+}
+
+.section_markets .container_page .img-wrapper {
+	border-radius: 12px;
+	overflow: hidden; /* Ensures the border-radius applies properly to images */
+}
+
+  

@@ -1,0 +1,122 @@
+@import "../../assets/css/variables.scss" ;
+@import "../../assets/css/mixins.scss";
+
+
+footer {
+	background-color: var(--footer_bg);
+	padding-top: 42px;
+	padding-bottom: 27px;
+
+	.links {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		flex-direction: column;
+
+		@include respond-to(sm) {
+			flex-direction: row;
+		}
+
+
+		.socials {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 42px;
+
+			.img-wrapper {
+				height: 31px;
+				width: 31px;
+
+				& > svg {
+					height: 100%;
+					width: 100%;
+				}
+			}
+		}
+
+		.markets {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 40px;
+			margin-top: 40px;
+			padding-left: 30px;
+			padding-right: 30px;
+
+			@include respond-to(sm) {
+				margin-top: 0;
+				padding: 0;
+			}
+
+			& a {
+				color: var(--text_reverse);
+			}
+	
+			.img-wrapper {
+				height: 45px;
+				width: 155px;	
+				
+				@include respond-to(sm) {
+					height: 36px;
+					width: 120px;
+				}
+			}
+		}
+	}
+
+
+	.disclaimer {
+		margin-top: 40px;
+		
+		@include respond-to(sm) {
+			margin-top: 50px;
+		}
+
+		@include respond-to(md) {
+			margin-top: 40px;
+		}
+
+		p {
+			color: var(--text_reverse);
+			text-align: center;
+			font-size: 14px;
+			font-weight: 400;
+			margin-top: 0;
+
+	
+			@include respond-to(md) {
+				font-size: 16px;
+			}
+
+		}
+
+		[role="navigation"] {
+			margin-top: 3px;
+			display: flex;
+			color: var(--text_reverse);
+			justify-content: center;
+			align-items: center;
+			gap: 10px;
+
+		}
+		
+		a {
+			text-decoration: underline;
+		}
+
+	}
+
+	.copyright {
+		p {
+			font-size: 12px;
+			color: var(--text_reverse);
+			text-align: center;
+		}
+
+		a {
+			text-decoration: underline;
+		}
+	}
+}

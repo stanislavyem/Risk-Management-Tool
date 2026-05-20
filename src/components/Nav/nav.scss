@@ -1,0 +1,18 @@
+@import "../../assets/css/variables.scss" ;
+@import "../../assets/css/mixins.scss";
+
+
+nav {
+	
+	& .nav-list_desktop {
+		display: none;
+		align-items: center;
+		list-style-type: none;
+		margin-left: 0;
+		
+		@include respond-to(sm) {
+			display: flex;
+		}
+		
+	}
+}
