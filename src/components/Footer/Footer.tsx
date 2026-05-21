@@ -15,7 +15,7 @@ const Footer = () => {
 								{svgs().iconFb}
 							</div>
 						</a> */}
-						<a href="https://www.instagram.com/datemarksapp/#" target="_blank" aria-label="Open the link to the Instagram profile in a new window">
+						<a href="https://www.instagram.com" target="_blank" aria-label="Open the link to the Instagram profile in a new window">
 							<div className="img-wrapper">
 								{svgs().iconInstagram}
 							</div>

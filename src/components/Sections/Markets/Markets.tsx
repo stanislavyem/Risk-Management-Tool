@@ -1,5 +1,4 @@
 import BlockInfo from '@/components/Blocks/Info/BlockInfo'
-import image1 from "../../../assets/images/market.png" 
 import './markets.scss'
 import InfoMarkets from '@/components/Blocks/InfoMarkets/InfoMarkets'
 import appStore from '../../../assets/images/app_store_white.svg'
@@ -12,7 +11,7 @@ const SectionMarkets = () => {
 			<div className="section__content">
 				<h2 className='section_markets__header'>Let the unexpected unfold</h2>
 				<div className="container_page container_content">
-					<BlockInfo 
+					{/* <BlockInfo 
 						img={{
 							src: image1 as unknown as string, 
 							alt: '!!!',
@@ -29,7 +28,7 @@ const SectionMarkets = () => {
 								{src: playMarket as unknown as string, alt: 'Play market', href: 'https://play.google.com/store/apps/details?id=com.datemarks.android'}
 							]}
 						/>
-					</BlockInfo>
+					</BlockInfo> */}
 				</div>
 			</div>
 		</section>
