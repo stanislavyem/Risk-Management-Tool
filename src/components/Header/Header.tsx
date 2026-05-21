@@ -9,8 +9,6 @@ import Image from 'next/image'
 import { makeImageSizes } from '@/assets/js/tools'
 // import Link from 'next/link'
 // import { homeLink } from '@/assets/js/consts'
-import appStore from '@/assets/images/app_store_white.svg'
-import playMarket from '@/assets/images/play_market_white.svg'
 
 // const Header = () => {
 // 	return (
@@ -69,11 +67,11 @@ const Header = () => {
 							src={logo.src} 
 							fill
 							alt='Our logo'
-							sizes={makeImageSizes({start: '35px', sm: '40px', md: '50px' })}
+							sizes={makeImageSizes({start: '35px', sm: '80px', md: '90px', xxl: '800px' })}
 							loading='lazy'
 						/>
 					</div>
-					<span className="text-xl md:text-2xl font-bold">Datemarks</span>
+					<span className="text-xl md:text-2xl font-bold">RistCtrlPro</span>
 					
 				</Link>
 			</div>

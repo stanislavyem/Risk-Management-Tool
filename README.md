@@ -1,7 +1,7 @@
-# Datemarks
+# RiskCtrlPro
 
 ## Install
-1. Download the archive and extract it to the folder or clone it using: git clone url https://github.com/Postmaxxx/Datemarks.git
+1. Download the archive and extract it to the folder or clone it using: git clone url https://github.com/stanislavyem/Risk-Management-Tool.git
 2. Check that your NodeJS version is >= 18.19.0
 3. Enter the folder and install dependencies using: npm i
 4. To start the app in dev mode use: npm run dev
