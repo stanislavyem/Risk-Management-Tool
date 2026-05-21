@@ -1,7 +1,5 @@
 // import LangSw from '../LangSw/LangSw'
 import Link from 'next/link'
-import Nav from '../Nav/Nav'
-import ThemeSw from '../ThemeSw/ThemeSw'
 import './header.scss'
 import { linkHome } from '@/assets/js/consts'
 import logo from '../../assets/images/ic_app_logo.png'
