@@ -6,18 +6,20 @@ import SectionConnected from '@/components/Sections/Connected/Connected'
 import SectionMarkets from '@/components/Sections/Markets/Markets'
 import SectionCreate from '@/components/Sections/Create/Create'
 import OnBoarding from '@/components/Sections/OnBoarding/OnBoarding'
+import InfoCreateEvent from '@/components/Blocks/InfoCreateEvent/InfoCreateEvent'
 
 const Home = () => {
 	return (
 		<>
-			<h1 className='sr-only'>Datemark app</h1>
+			<h1 className='sr-only'>RiskCtrlPro</h1>
 			<SectionHero />
-			<SectionCreate />	
+			<InfoCreateEvent />
+			{/* <SectionCreate />	 */}
 			{/* <OnBoarding /> */}
-			<SectionDiscover />
+			{/* <SectionDiscover />
 			<SectionMarkets />
-			<SectionChat />
-			<SectionConnected />
+			<SectionChat /> */}
+			{/* <SectionConnected /> */}
 		</>
 	)
 }

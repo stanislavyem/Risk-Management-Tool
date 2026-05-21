@@ -34,8 +34,8 @@ header {
 	}
 
 	.logo-wrapper {
-		height: 35px;
-		width: 35px;
+		height: 250px;
+		width: 50px;
 		position: relative;
 
 		@include respond-to(sm) {
@@ -43,7 +43,7 @@ header {
 		}
 
 		@include respond-to(md) {
-			width: 50px;
+			width: 250px;
 		}
 
 		.header__logo {

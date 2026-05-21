@@ -2,7 +2,6 @@
 import { useAppContext } from '@/hooks/useAppContext'
 import './about.scss'
 import BlockInfo from '@/components/Blocks/Info/BlockInfo'
-import markCalendar from "../../../assets/images/mark_calendar.svg"
 import InfoText from '@/components/Blocks/InfoText/InfoText'
 
 const SectionAbout = () => {
@@ -13,7 +12,7 @@ const SectionAbout = () => {
 			<div className="section__content">
 				<div className="container_page container_content">
 					<h1>{lang === 'en' ? 'About Datemarks' : 'FR About Us'}</h1>
-					<BlockInfo 
+					{/* <BlockInfo 
 						img={{
 							src: markCalendar, 
 							alt: 'Two people use their smartphones for social interaction',
@@ -26,7 +25,7 @@ const SectionAbout = () => {
 								"Datemarks is a dynamic platform, managed by an independent subsidiary of private company. Our team is fuelled by passion, dedicated to our craft, and collectively excited about exploring new horizons alongside our users."
 							]}
 						/>
-					</BlockInfo>
+					</BlockInfo> */}
 				</div>
 			</div>
 		</section>

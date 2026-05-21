@@ -67,11 +67,11 @@ const Header = () => {
 							src={logo.src} 
 							fill
 							alt='Our logo'
-							sizes={makeImageSizes({start: '35px', sm: '80px', md: '90px', xxl: '800px' })}
+							sizes={makeImageSizes({start: '35px', sm: '80px', md: '90px' })}
 							loading='lazy'
 						/>
 					</div>
-					<span className="text-xl md:text-2xl font-bold">RistCtrlPro</span>
+					{/* <span className="text-xl md:text-2xl font-bold">RistCtrlPro</span> */}
 					
 				</Link>
 			</div>
