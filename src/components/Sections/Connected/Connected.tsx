@@ -1,5 +1,4 @@
 import BlockInfo from '@/components/Blocks/Info/BlockInfo'
-import onboarding2 from "../../../assets/images/on_boarding_4.png"
 import InfoText from '@/components/Blocks/InfoText/InfoText'
 
 
@@ -9,7 +8,7 @@ const SectionConnected = () => {
 			<div className="section__content">
 			<h2 className='section_create__header'>Meet People</h2>
 				<div className="container_page container_content">
-					<BlockInfo 
+					{/* <BlockInfo 
 						img={{
 							src: onboarding2.src, 
 							alt: 'Datemarks is for meeting people in real life',
@@ -22,7 +21,7 @@ const SectionConnected = () => {
 								"Invite the experience and meet new people in real life", 
 							]}
 						/>
-					</BlockInfo>
+					</BlockInfo> */}
 				</div>
 			</div>
 		</section>

@@ -1,5 +1,4 @@
 import BlockInfo from '@/components/Blocks/Info/BlockInfo'
-import demo from "../../../assets/images/demo.png"
 import Image from 'next/image'
 import appStore from '../../../assets/images/app_store.svg'
 import playMarket from '../../../assets/images/play_market.svg'
@@ -11,7 +10,7 @@ const SectionHero = () => {
 			<div className="section__content">
 				<h2 className='section_create__header'>Invite The Experience</h2>
 				<div className="container_page container_content">
-					<BlockInfo
+					{/* <BlockInfo
 						img={{
 							src: demo as unknown as string,
 							alt: '!!!',
@@ -28,7 +27,7 @@ const SectionHero = () => {
 								{src: playMarket as unknown as string, alt: 'Play market', href: 'https://play.google.com/store/apps/details?id=com.datemarks.android'}
 							]}
 						/>
-					</BlockInfo>
+					</BlockInfo> */}
 				</div>
 			</div>
 		</section>

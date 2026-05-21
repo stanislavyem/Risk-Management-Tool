@@ -1,8 +1,6 @@
 import Image from 'next/image'
 import './footer.scss'
 import { svgs } from '@/assets/icons/svgs'
-import appStore from '../../assets/images/app_store.svg'
-import playMarket from '../../assets/images/play_market.svg'
 import Link from 'next/link'
 import { linkAbout, linkHome, linkPrivacy, linkTerms } from '@/assets/js/consts'
 
@@ -28,7 +26,7 @@ const Footer = () => {
 							</div>
 						</a> */}
 					</div>
-					<div className="markets">
+					{/* <div className="markets">
 						<a href="https://apps.apple.com/ca/app/datemarks/id6496861002" target="_blank" aria-label='Open the link in a new window'>
 							<div className="img-wrapper">
 								<Image 
@@ -49,7 +47,7 @@ const Footer = () => {
 								/>
 							</div>
 						</a>
-					</div>
+					</div> */}
 				</div>
 				<div className="disclaimer">
 					<p>By accessing this website, you agree to the Datemarks <Link href={linkTerms}>Terms of Service</Link> and <Link href={linkPrivacy}>Privacy Policy</Link>.</p>

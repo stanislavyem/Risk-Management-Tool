@@ -1,5 +1,4 @@
 import BlockInfo from '@/components/Blocks/Info/BlockInfo'
-import onboarding2 from "../../../assets/images/on_boarding_1.png"
 import InfoText from '@/components/Blocks/InfoText/InfoText'
 import './create.scss'
 
@@ -9,7 +8,7 @@ const SectionEvents = () => {
 			<div className="section__content">
 			<h2 className='section_create__header'>Create Activities</h2>
 				<div className="container_page container_content">
-					<BlockInfo 
+					{/* <BlockInfo 
 						img={{
 							src: onboarding2.src, 
 							alt: 'Create activities',
@@ -22,7 +21,7 @@ const SectionEvents = () => {
 								"Make the most of your time by creating last-minute plans and inviting others to join", 
 							]}
 						/>
-					</BlockInfo>
+					</BlockInfo> */}
 				</div>
 			</div>
 		</section>
