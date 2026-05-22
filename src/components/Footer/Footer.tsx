@@ -68,9 +68,9 @@ const Footer = () => {
               className="h-7 w-auto object-contain"
             />
           </div>
-          <div className="copyright">
+          <p className="copyright">
             © 2026 RiskCtrlPro. All rights reserved.
-          </div>
+          </p>
         </div>
       </div>
     </footer>

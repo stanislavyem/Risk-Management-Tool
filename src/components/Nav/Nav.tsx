@@ -6,42 +6,42 @@ import { linkAbout, linkHome, linkPrivacy, linkTerms, linkFeedback } from '@/ass
 
 
 export const navItems: INavItem[] = [
-	{
-		title: {
-			en: 'Home',
-			fr: 'FR Home',
-		},
-		link: linkHome,
+	// {
+	// 	title: {
+	// 		en: 'Home',
+	// 		fr: 'FR Home',
+	// 	},
+	// 	link: linkHome,
 		
-	},
+	// },
+	// {
+	// 	title: {
+	// 		en: 'Privacy',
+	// 		fr: 'FR Privacy',
+	// 	},
+	// 	link: linkPrivacy
+	// },
+	// {
+	// 	title: {
+	// 		en: 'Terms',
+	// 		fr: 'FR Terms',
+	// 	},
+	// 	link: linkTerms
+	// },
 	{
 		title: {
-			en: 'Privacy',
-			fr: 'FR Privacy',
-		},
-		link: linkPrivacy
-	},
-	{
-		title: {
-			en: 'Terms',
-			fr: 'FR Terms',
-		},
-		link: linkTerms
-	},
-	{
-		title: {
-			en: 'About Us',
-			fr: 'FR About Us',
+			en: 'Features',
+			fr: 'Features',
 		},
 		link: linkAbout
 	},
-	{
-		title: {
-			en: 'Feedback',
-			fr: 'FR Feedback',
-		},
-		link: linkFeedback
-	},
+	// {
+	// 	title: {
+	// 		en: 'Feedback',
+	// 		fr: 'FR Feedback',
+	// 	},
+	// 	link: linkFeedback
+	// },
 	// {
 	// 	title: {
 	// 		en: 'Login',

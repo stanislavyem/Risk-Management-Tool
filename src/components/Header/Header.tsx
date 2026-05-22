@@ -1,4 +1,7 @@
-// import LangSw from '../LangSw/LangSw'
+import LangSw from '../LangSw/LangSw'
+import ThemeSw from '../ThemeSw/ThemeSw'
+import Nav from '../Nav/Nav'
+
 import Link from 'next/link'
 import './header.scss'
 import { linkHome } from '@/assets/js/consts'
@@ -54,62 +57,62 @@ import { makeImageSizes } from '@/assets/js/tools'
 // };
 
 // Simple header without store links
-const Header = () => {
-	return (
-		<header>
-			<div className="container_page container_content header__content">
-				<Link className='header__company flex items-center gap-1' href={linkHome}>
-					<div className="logo-wrapper relative">
-						<Image 
-							className='header__logo'
-							src={logo.src} 
-							fill
-							alt='Our logo'
-							sizes={makeImageSizes({start: '35px', sm: '80px', md: '90px' })}
-							loading='lazy'
-						/>
-					</div>
-					{/* <span className="text-xl md:text-2xl font-bold">RistCtrlPro</span> */}
-					
-				</Link>
-			</div>
-		</header>
-	)
-}
-
-// Header with language and theme
 // const Header = () => {
 // 	return (
 // 		<header>
 // 			<div className="container_page container_content header__content">
-// 				<div className="logo-wrapper mr-auto">
-// 					<Link href="">
+// 				<Link className='header__company flex items-center gap-1' href={linkHome}>
+// 					<div className="logo-wrapper relative">
 // 						<Image 
-// 							className='header__logo w-10'
+// 							className='header__logo'
 // 							src={logo.src} 
 // 							fill
 // 							alt='Our logo'
-// 							sizes={makeImageSizes({start: '35px', sm: '40px', md: '50px' })}
+// 							sizes={makeImageSizes({start: '35px', sm: '80px', md: '90px' })}
 // 							loading='lazy'
 // 						/>
-// 					</Link>
-// 				</div>
-				
-// 				<Link className='header__company' href={linkHome}>datemarks</Link>
-
-// 				{/* <Nav/> */}
-
-// 				{/* <div className="lang-sw-wrapper me-3 h-full flex items-center">
-// 					<LangSw />
-// 				</div> */}
-				
-// 				{/* <div className="theme-sw-wrapper h-full flex items-center">
-// 					<ThemeSw />
-// 				</div> */}
+// 					</div>
+// 					{/* <span className="text-xl md:text-2xl font-bold">RistCtrlPro</span> */}
+					
+// 				</Link>
 // 			</div>
 // 		</header>
 // 	)
 // }
+
+// Header with language and theme
+ const Header = () => {
+ 	return (
+ 		<header>
+ 			<div className="container_page container_content header__content">
+ 				<div className="logo-wrapper mr-auto">
+ 					<Link href="/home">
+ 						<Image 
+ 							className='header__logo w-10'
+ 							src={logo.src} 
+ 							fill
+ 							alt='Our logo'
+ 							sizes={makeImageSizes({start: '35px', sm: '40px', md: '50px' })}
+ 							loading='lazy'
+ 						/>
+ 					</Link>
+ 				</div>
+				
+ 				{/* <Link className='header__company' href={linkHome}>datemarks</Link> */}
+
+				<Nav />
+
+ 				{/* <div className="lang-sw-wrapper me-3 h-full flex items-center">
+ 					<LangSw />
+ 				</div> */}
+				
+ 				{/* <div className="theme-sw-wrapper h-full flex items-center">
+ 					<ThemeSw />
+ 				</div> */}
+ 			</div>
+ 		</header>
+ 	)
+}
 
 
 export default Header
