@@ -77,8 +77,8 @@ const SectionHero = () => {
                           Overall Risk Score
                         </p>
                         <p className="text-4xl font-bold" style={{
-							color: "#2258C3",
-						}}>87.5</p>
+                          color: "#2258C3",
+                        }}>87.5</p>
                       </div>
                       <div className="h-16 w-16 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
                         <svg
