@@ -65,7 +65,7 @@ const Footer = () => {
             <img
               src={logo.src}
               alt="RiskCtrlPro"
-              className="h-7 w-auto object-contain"
+              className="h-[120px] w-auto object-contain"
             />
           </div>
           <p className="copyright">
